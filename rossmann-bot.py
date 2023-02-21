@@ -80,14 +80,14 @@ def parse_message( message ):
 	chat_id = message['message']['chat']['id']
 	store_id = message['message']['text']
 	
-	store_id.replace( '/', '' )
+	store_id.replace( '/', ' ' )
 	
-	try:
-		store_id = int( store_id )
-	except ValueError:
-		store_id = 'error'
+	#try:
+	#	store_id = int( store_id )
+	#except ValueError:
+	#	store_id = 'error'
 	
-	return chat_id, store_id
+	#return chat_id, store_id
 
 
 # API initialize
@@ -120,7 +120,7 @@ def index():
 				send_message( chat_id, 'Número de loja não disponível')
 				return Response( 'Ok', status=200 )
 		else:
-			send_message( chat_id, 'Erro: {} não é um número de loja'.format( message ) )
+			send_message( chat_id, 'Erro: {} não é um número de loja'.format( store_id ) )
 			return Response( 'OK', status=200 )
 			
 	else:
