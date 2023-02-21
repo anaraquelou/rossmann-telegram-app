@@ -43,7 +43,7 @@ def load_dataset( store_id ):
 	df_test = pd.merge( df10, df_store_raw, how = 'left', on = 'Store'  )
 
 	# chose store for prediction
-	df_test = df_test[ df_test['Store'] == 22 ]
+	#df_test = df_test[ df_test['Store'] == 22 ]
 	
 	df_test = df_test[df_test['Store'] == store_id ]
 	
@@ -120,7 +120,7 @@ def index():
 				send_message( chat_id, 'Número de loja não disponível')
 				return Response( 'Ok', status=200 )
 		else:
-			send_message( chat_id, 'Erro: não é um número de loja' )
+			send_message( chat_id, 'Erro: {} não é um número de loja'.format( store_id )
 			return Response( 'OK', status=200 )
 			
 	else:
