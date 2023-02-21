@@ -126,7 +126,6 @@ def index():
 	else:
 		return '<h1> Rossmann Telegram BOT </h1>'
 	
-	return 'Não sei o que rolou! data = {}, store_id = {}'.format(data, store_id)
 		
 if __name__ == '__main__':
 	port = os.environ.get( 'PORT', 5000 )
