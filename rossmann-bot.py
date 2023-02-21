@@ -19,7 +19,7 @@ TOKEN = '5925337760:AAFltUssi8Tbkz8hxzfA2yha_J_33xV_bJ8'
 # https://api.telegram.org/bot5925337760:AAFltUssi8Tbkz8hxzfA2yha_J_33xV_bJ8/setWebhook?url=https://49dd8047158d9a.lhr.life/
 
 # Webhook Render
-# https://api.telegram.org/bot5925337760:AAFltUssi8Tbkz8hxzfA2yha_J_33xV_bJ8/setWebhook?url=https://rossmann-telegram-app-0qit.onrender.com
+# https://api.telegram.org/bot5925337760:AAFltUssi8Tbkz8hxzfA2yha_J_33xV_bJ8/setWebhook?url=https://rossmann-telegram-app-39zc.onrender.com
 
 # send message
 # https://api.telegram.org/bot5925337760:AAFltUssi8Tbkz8hxzfA2yha_J_33xV_bJ8/sendMessage?chat_id=5854880522&text=Oi%20Raquel
@@ -110,8 +110,8 @@ def index():
 				d2 = d1[ ['store', 'prediction'] ].groupby( 'store' ).sum().reset_index()
 				# send message
 				msg = 'Loja nº {} vai vender R$ {:,.2f} nas pŕoximas seis semanas.'.format( 
-				d2.loc['store'].values[0], 
-				d2.loc['prediction'].values[0] )
+				d2['store'].values[0], 
+				d2['prediction'].values[0] )
 				
 				send_message( chat_id, msg )
 				return Response( 'Ok', status=200 )
