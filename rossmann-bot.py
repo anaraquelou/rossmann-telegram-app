@@ -2,6 +2,7 @@ import os
 import requests
 import json
 import pandas as pd
+import numpy as np
 
 from flask import Flask, request, Response
 
@@ -16,6 +17,9 @@ TOKEN = '5925337760:AAFltUssi8Tbkz8hxzfA2yha_J_33xV_bJ8'
 
 # Webhook
 # https://api.telegram.org/bot5925337760:AAFltUssi8Tbkz8hxzfA2yha_J_33xV_bJ8/setWebhook?url=https://49dd8047158d9a.lhr.life/
+
+# Webhook Render
+# https://api.telegram.org/bot5925337760:AAFltUssi8Tbkz8hxzfA2yha_J_33xV_bJ8/setWebhook?url=https://rossmann-telegram-app-0qit.onrender.com
 
 # send message
 # https://api.telegram.org/bot5925337760:AAFltUssi8Tbkz8hxzfA2yha_J_33xV_bJ8/sendMessage?chat_id=5854880522&text=Oi%20Raquel
