@@ -87,7 +87,7 @@ def parse_message( message ):
 	#except ValueError:
 	#	store_id = 'error'
 	
-	#return chat_id, store_id
+	return chat_id, store_id
 
 
 # API initialize
