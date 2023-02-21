@@ -1,0 +1,5 @@
+Flask==2.1.0
+jsonschema==3.1.1
+pandas==0.25.3
+requests==2.22.0
+
