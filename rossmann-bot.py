@@ -43,7 +43,6 @@ def load_dataset( store_id ):
 	df_test = pd.merge( df10, df_store_raw, how = 'left', on = 'Store'  )
 
 	# chose store for prediction
-	#df_test = df_test[ df_test['Store'] == 22 ]
 	
 	df_test = df_test[df_test['Store'] == store_id ]
 	
