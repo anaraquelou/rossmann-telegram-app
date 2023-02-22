@@ -116,10 +116,10 @@ def index():
 				return Response( 'Ok', status=200 )
 				
 			else:
-				send_message( chat_id, 'Loja nº {} não disponível em data = {}'.format(store_id, data) )
+				send_message( chat_id, 'Loja nº {} não disponível.'.format(store_id) )
 				return Response( 'Ok', status=200 )
 		else:
-			send_message( chat_id, 'Erro: {} não é um número de loja'.format( store_id ) )
+			send_message( chat_id, 'Erro: não é um número de loja.' )
 			return Response( 'OK', status=200 )
 			
 	else:
