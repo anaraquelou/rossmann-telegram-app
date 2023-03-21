@@ -1,3 +1,4 @@
+import config
 import os
 import requests
 import json
@@ -5,9 +6,6 @@ import pandas as pd
 import numpy as np
 
 from flask import Flask, request, Response
-
-# constants
-TOKEN = '5925337760:AAFltUssi8Tbkz8hxzfA2yha_J_33xV_bJ8'
 
 # info about the bot
 # https://api.telegram.org/bot5925337760:AAFltUssi8Tbkz8hxzfA2yha_J_33xV_bJ8/getMe
