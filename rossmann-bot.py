@@ -23,7 +23,7 @@ from flask import Flask, request, Response
 # https://api.telegram.org/bot5925337760:AAFltUssi8Tbkz8hxzfA2yha_J_33xV_bJ8/sendMessage?chat_id=5854880522&text=Oi%20Raquel
 
 def send_message( chat_id, text ):
-	url ='https://api.telegram.org/bot{}/'.format( TOKEN )
+	url ='https://api.telegram.org/bot{}/'.format( config.token )
 	url = url + 'sendMessage?chat_id={}'.format( chat_id )
 	
 	r = requests.post( url, json={'text': text} )
